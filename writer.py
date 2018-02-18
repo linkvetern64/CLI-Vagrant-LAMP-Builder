@@ -58,7 +58,7 @@ def writeFiles(args):
 
     print("Finished successfully...")
     print("Access with IP " + args['-i'])
-    print("Hostname " + args['-h'])
+    print("Hostname " + args['-h'] + ".dev")
 
 def writeCustomFiles(IP, host):
 

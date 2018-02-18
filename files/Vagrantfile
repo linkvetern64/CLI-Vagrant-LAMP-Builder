@@ -1,10 +1,10 @@
 Vagrant.configure(2) do |config|
 	config.vm.synced_folder '.', '/vagrant', disabled: true
 	config.vm.box = "debian/contrib-jessie64"
-	config.vm.network "private_network", ip: "192.255.142.126"
-	config.vm.hostname = "AppTest.dev"
-	config.hostsupdater.aliases = ["AppTest.dev"]
-	config.vm.synced_folder "./AppTest/", "/srv/AppTest", create: true
+	config.vm.network "private_network", ip: "192.106.63.197"
+	config.vm.hostname = "bb-website.dev"
+	config.hostsupdater.aliases = ["bb-website.dev"]
+	config.vm.synced_folder "./bb-website/", "/srv/bb-website", create: true
 	config.vm.synced_folder "./config/", "/var/config_files", create: true
 	config.vm.provision :shell, path: "./config/bootstrap.sh"
 	config.vm.provider "virtualbox" do |vb|
