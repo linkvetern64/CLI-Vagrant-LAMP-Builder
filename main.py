@@ -1,5 +1,7 @@
-import sys, os, random, string
+import sys, os, random, string, webbrowser
+import urllib.request, urllib.error
 from writer import *
+
 
 def IP(ip):
 
@@ -18,6 +20,20 @@ def IP(ip):
     # -p Path - None, use default location
     # -f FolderName
 def main():
+
+    # Register chrome web-browser
+    #open_url(url, 'chrome')
+
+    print("Testing URL Lib")
+
+    req = urllib.request.Request('https://www.google.com')
+    try:
+        urllib.request.urlopen(req)
+    except urllib.error.HTTPError as e:
+        print(e.code)
+        print(e.read())
+    exit(0)
+
     args = {}
     lenArgs = len(sys.argv)
     if (lenArgs > 1 and '--h' == sys.argv[1]):
@@ -73,6 +89,12 @@ def main():
     print("Generating folders...")
     writeFiles(args)
 
-    #Dump completed IP and hostname, inform about installing hostnames
-    #Do you want to include a README and .gitignore file??
+
+
+
 main()
+
+
+
+
+
