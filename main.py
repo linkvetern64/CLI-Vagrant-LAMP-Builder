@@ -21,18 +21,7 @@ def IP(ip):
     # -f FolderName
 def main():
 
-    # Register chrome web-browser
-    #open_url(url, 'chrome')
-
-    print("Testing URL Lib")
-
-    req = urllib.request.Request('https://www.google.com')
-    try:
-        urllib.request.urlopen(req)
-    except urllib.error.HTTPError as e:
-        print(e.code)
-        print(e.read())
-    exit(0)
+    
 
     args = {}
     lenArgs = len(sys.argv)
